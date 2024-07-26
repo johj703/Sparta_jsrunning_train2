@@ -80,12 +80,14 @@ console.log(result2);
 var arr = [3, 1, 4, 1, 5, 9, 2, 6, 5, 3];
 // 오름차순으로 정렬하여 출력해주세요
 
+arr.sort(a, (b) => a - b);
+
 7;
 var student = [
   { name: "이재상", age: 25 },
   { name: "정윤오", age: 30 },
-  { name: "김준현", age: 12312 },
-];
+  { name: "김준현", age: 123122 },
+].sort(a, (b) => b.age - a.age);
 
 // age를 이용하여 내림차순으로 정렬하고 출력해주세요
 
@@ -94,7 +96,7 @@ var student = [
   { id: 1, name: "이재상" },
   { id: 2, name: null },
   { id: 3, name: "김준현" },
-];
+].filter((student, index) => student.name !== name);
 // 객체 배렬에서 name 속성이 null인 객체가 있는지 판별을 확인하는 코드를 작성하고 반환값을 출력해주세요
 
 9;
@@ -107,18 +109,20 @@ var arr = [
   "orange",
   "plum",
   "cherry",
-];
+].some((fruit) => fruit.length > 5);
 // 문자열 길이가 5를 초과하는 요소가 있는지 검사하는 코드를 작성하고 반환값을 출력해주세요.
 
 10;
 var arr = ["banana", "kiwi", "mango"];
+arr.splice(1, 0, "apple");
+console.log(arr);
 // kiwi 와 manggo 사이에 새로운 요소를 삽입하는 코드를 작성하고 출력해주세요
 
 11;
-var arr = [1, 5, -3, 10, 0, 8];
+var arr = [1, 5, -3, 10, 0, 8].some((number) => number < 0);
 
 // 배열에 음수가 하나라도 있는지 판별하는 코드를 작성하고 반환값을 출력해주세요
 
 12;
-var arr = [1, 5, -3, 10, 0, 8];
+var arr = [1, 5, -3, 10, 0, 8].every((number) => number < 0);
 // 모든 숫자가 음수인지 판별하는 코드를 작성하고 반환값을 출력해주세요

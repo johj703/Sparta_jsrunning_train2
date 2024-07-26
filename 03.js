@@ -23,12 +23,15 @@ const deepCopy = JSON.parse(JSON.stringify(student));
 
 // 얕은 복사 객체와 원본 객체를 비교하여 출력해주세요
 console.log("1. 원본 객체(student)와 얕은 복사 객체가 같을까요?");
+// 답 => 같습니다!
 
 // 얕은 복사 객체의 address와 원본 객체의 address를 비교하여 출력해주세요.
 console.log("2. 원본 객체의 address와 얕은 복사 객체의 address가 같을까요?");
+// 답 => 같습니다.
 
 // 깊은 복사 객체와 원본 객체를 비교하여 출력해주세요.
 console.log("3. 원본 객체(student)와 깊은 복사 객체가 같을까요?");
+console.log(student, deepCopy);
 
 // 깊은 복사 객체의 address와 원본 객체의 address를 비교하여 출력해주세요.
 console.log("4. 원본 객체의 address와 깊은 복사 객체의 address가 같을까요?");
